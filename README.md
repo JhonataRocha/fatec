@@ -35,13 +35,17 @@ npm install
 ### 3. Colocar o banco de dados na pasta do servidor
 Copie o arquivo `acoditools.db` para a pasta `Server Node`.
 
-### 4. Iniciar o servidor
+### 4. Definir variáveis de ambiente (opcional)
+- `PORT`: porta utilizada pelo servidor (padrão `3000`).
+- `DB_FILE`: caminho para o arquivo SQLite (padrão `./acoditools.db`).
+
+### 5. Iniciar o servidor
 ```bash
 npm start
 ```
-O servidor será iniciado em `http://localhost:3000`.
+O servidor será iniciado em `http://localhost:3000` (ou na porta definida em `PORT`).
 
-### 5. Abrir o frontend
+### 6. Abrir o frontend
 Abra o arquivo `HTML Projeto/inicial/index.html` no navegador (pode usar Live Server).
 
 ---
