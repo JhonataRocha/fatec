@@ -3,6 +3,7 @@ import express from 'express';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import cors from 'cors';
+import bcrypt from 'bcrypt';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -37,9 +38,11 @@ app.post('/usuario', async (req, res) => {
             return res.status(409).json({ error: "Email já cadastrado." });
         }
 
+        const hashed = await bcrypt.hash(password, 10);
+
         const result = await db.run(
             'INSERT INTO usuarios (nome, email, password) VALUES (?, ?, ?)',
-            [nome, email, password]
+            [nome, email, hashed]
         );
 
         res.status(201).json({ id: result.lastID, nome, email });
@@ -57,12 +60,17 @@ app.post('/login', async (req, res) => {
     }
 
     try {
-        const user = await db.get('SELECT * FROM usuarios WHERE email = ? AND password = ?', [email, password]);
+        const user = await db.get('SELECT * FROM usuarios WHERE email = ?', [email]);
         if (!user) {
             return res.status(401).json({ error: "Credenciais inválidas." });
         }
 
-        res.status(200).json({ message: "Login bem-sucedido", user });
+        const valid = await bcrypt.compare(password, user.password);
+        if (!valid) {
+            return res.status(401).json({ error: "Credenciais inválidas." });
+        }
+
+        res.status(200).json({ message: "Login bem-sucedido", user: { id: user.id, nome: user.nome, email: user.email } });
     } catch (err) {
         res.status(500).json({ error: "Erro ao fazer login." });
     }

@@ -31,6 +31,8 @@ cd acoditools
 cd "Server Node"
 npm install
 ```
+Isso irá instalar todas as bibliotecas necessárias, incluindo o `bcrypt`,
+utilizado para proteger as senhas dos usuários.
 
 ### 3. Colocar o banco de dados na pasta do servidor
 Copie o arquivo `acoditools.db` para a pasta `Server Node`.
