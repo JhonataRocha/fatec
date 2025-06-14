@@ -5,7 +5,7 @@ import { open } from 'sqlite';
 import cors from 'cors';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -14,7 +14,7 @@ let db;
 
 async function iniciarBanco() {
     db = await open({
-        filename: './acoditools.db',
+        filename: process.env.DB_FILE || './acoditools.db',
         driver: sqlite3.Database
     });
 
