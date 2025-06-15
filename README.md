@@ -22,7 +22,7 @@
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/SEU_USUARIO/acoditools.git
+git clone [https://github.com/JhonataRocha/fatec.git](https://github.com/JhonataRocha/fatec.git)
 cd acoditools
 ```
 
