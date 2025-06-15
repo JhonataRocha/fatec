@@ -1,9 +1,9 @@
 
 // login.js
 
-function handleLogin(email, senha) {
+function handleLogin(email, password) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !senha) {
+    if (!email || !password) {
         showToast('Por favor, preencha o email e a senha.');
         return;
     }
@@ -17,7 +17,7 @@ function handleLogin(email, senha) {
     fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password: senha })
+        body: JSON.stringify({ email, password })
     })
     .then(response => {
         if (response.ok) {

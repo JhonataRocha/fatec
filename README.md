@@ -33,8 +33,11 @@ cd "Server Node"
 npm install
 ```
 
-### 3. Colocar o banco de dados na pasta do servidor
-Copie o arquivo `acoditools.db` para a pasta `Server Node`.
+### 3. Criar o banco de dados
+Execute o script de inicialização para gerar `acoditools.db` na pasta `Server Node`:
+```bash
+npm run init-db
+```
 
 ### 4. Definir variáveis de ambiente (opcional)
 - `PORT`: porta utilizada pelo servidor (padrão `3000`).
