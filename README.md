@@ -22,8 +22,8 @@
 
 ### 1. Clonar o repositório
 ```bash
-git clone [https://github.com/JhonataRocha/fatec.git](https://github.com/JhonataRocha/fatec.git)
-cd acoditools
+git clone https://github.com/JhonataRocha/fatec.git
+cd fatec
 ```
 
 ### 2. Instalar as dependências
