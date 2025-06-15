@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.addEventListener("submit", function (event) {
             event.preventDefault();
             const email = document.getElementById("email").value.trim();
-            const senha = document.getElementById("senha").value;
-            handleLogin(email, senha);
+            const password = document.getElementById("password").value;
+            handleLogin(email, password);
         });
     }
 });
