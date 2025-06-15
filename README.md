@@ -20,6 +20,7 @@
 
 ## 🚀 Como rodar o projeto localmente
 
+> **Nota:** as senhas deste projeto ficam salvas em *texto puro* no banco de dados. Utilize-o apenas para fins de estudo.
 ### 1. Clonar o repositório
 ```bash
 git clone https://github.com/JhonataRocha/fatec.git
@@ -31,8 +32,6 @@ cd fatec
 cd "Server Node"
 npm install
 ```
-Isso irá instalar todas as bibliotecas necessárias, incluindo o `bcrypt`,
-utilizado para proteger as senhas dos usuários.
 
 ### 3. Colocar o banco de dados na pasta do servidor
 Copie o arquivo `acoditools.db` para a pasta `Server Node`.
