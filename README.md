@@ -57,6 +57,19 @@ Ao iniciar o servidor é criado automaticamente um usuário administrador com:
 - **Email:** admin@emil.com
 - **Senha:** admin123
 
+### Usuário de teste
+Para testar as rotas, crie manualmente o seguinte usuário utilizando a rota `/usuario`:
+- **Nome:** Teste
+- **Email:** teste@teste.com
+- **Senha:** 123456
+
+Exemplo de requisição com `curl`:
+```bash
+curl -X POST http://localhost:3000/usuario \
+     -H "Content-Type: application/json" \
+     -d '{"nome": "Teste", "email": "teste@teste.com", "password": "123456"}'
+```
+
 ---
 
 ## 🔌 Rotas da API

@@ -57,11 +57,6 @@ COMMIT;
 
     await db.exec(sql);
 
-    // add test user if not exists
-    const existing = await db.get('SELECT * FROM usuarios WHERE email = ?', ['teste@teste.com']);
-    if (!existing) {
-        await db.run('INSERT INTO usuarios (nome, email, password) VALUES (?, ?, ?)', ['Teste', 'teste@teste.com', '123456']);
-    }
 
     await db.close();
     console.log('Banco de dados criado com sucesso.');
