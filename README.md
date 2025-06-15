@@ -29,12 +29,12 @@ cd fatec
 
 ### 2. Instalar as dependências
 ```bash
-cd "Server Node"
+cd backend
 npm install
 ```
 
 ### 3. Criar o banco de dados
-Execute o script de inicialização para gerar `acoditools.db` na pasta `Server Node`:
+Execute o script de inicialização para gerar `acoditools.db` na pasta `backend`:
 ```bash
 npm run init-db
 ```
@@ -50,7 +50,7 @@ npm start
 O servidor será iniciado em `http://localhost:3000` (ou na porta definida em `PORT`).
 
 ### 6. Abrir o frontend
-Abra o arquivo `HTML Projeto/inicial/index.html` no navegador (pode usar Live Server).
+Abra o arquivo `frontend/auth/index.html` no navegador (pode usar Live Server).
 
 ### Usuário administrador padrão
 Ao iniciar o servidor é criado automaticamente um usuário administrador com:

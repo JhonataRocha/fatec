@@ -1,4 +1,4 @@
 node_modules/
 
 # Ignore database file
-Server Node/acoditools.db
+backend/acoditools.db
