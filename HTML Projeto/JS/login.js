@@ -23,7 +23,7 @@ function handleLogin(email, senha) {
         if (response.ok) {
             return response.json().then(data => {
                 localStorage.setItem('userId', data.user.id);
-                window.location.href = '../Auditor/conteudodash.html';
+                window.location.href = '../Auditor/inicio_dashboard.html';
             });
         } else {
             return response.json().then(data => {
