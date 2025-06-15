@@ -6,6 +6,7 @@
     <title>Minhas Auditorias - ACodITools</title>
     <link rel="stylesheet" href="../styles/estiloconteud.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script defer src="../js/minhas_auditorias.js"></script>
 </head>
 <body>
     <div class="content-section">
@@ -15,7 +16,18 @@
         </header>
 
         <section class="audit-container">
-            <!-- container para minhas auditorias-->
+            <table class="audit-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Categoria</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaMinhasAuditorias"></tbody>
+            </table>
         </section>
     </div>
 </body>
