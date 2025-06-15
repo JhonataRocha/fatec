@@ -3,8 +3,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Listagem de Achados</title>
-    <script defer src="../JS/achados.js"></script>
+    <title>Listagem de Auditorias</title>
+    <script defer src="../js/auditorias.js"></script>
     <style>
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
@@ -12,18 +12,19 @@
     </style>
 </head>
 <body>
-    <h1>Achados</h1>
+    <h1>Auditorias</h1>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Descrição</th>
-                <th>ID Auditoria</th>
-                <th>Status</th>
+                <th>Título</th>
+                <th>Categoria</th>
                 <th>Data</th>
+                <th>Status</th>
+                <th>Usuário</th>
             </tr>
         </thead>
-        <tbody id="tabelaAchados"></tbody>
+        <tbody id="tabelaAuditorias"></tbody>
     </table>
 </body>
 </html>
