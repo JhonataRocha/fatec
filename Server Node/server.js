@@ -23,6 +23,20 @@ async function iniciarBanco() {
 
 await iniciarBanco();
 
+async function criarAdmin() {
+    const adminEmail = 'admin@emil.com';
+    const existente = await db.get('SELECT * FROM usuarios WHERE email = ?', [adminEmail]);
+    if (!existente) {
+        await db.run(
+            'INSERT INTO usuarios (nome, email, password) VALUES (?, ?, ?)',
+            ['admin', adminEmail, 'admin123']
+        );
+        console.log('Usuário admin criado');
+    }
+}
+
+await criarAdmin();
+
 // Rota: Cadastrar novo usuário
 app.post('/usuario', async (req, res) => {
     const { nome, email, password } = req.body;

@@ -50,6 +50,11 @@ O servidor será iniciado em `http://localhost:3000` (ou na porta definida em `P
 ### 6. Abrir o frontend
 Abra o arquivo `HTML Projeto/inicial/index.html` no navegador (pode usar Live Server).
 
+### Usuário administrador padrão
+Ao iniciar o servidor é criado automaticamente um usuário administrador com:
+- **Email:** admin@emil.com
+- **Senha:** admin123
+
 ---
 
 ## 🔌 Rotas da API
